@@ -1,6 +1,7 @@
 # camper_van for Docker
 
-Run the camper_van Camfire <-> IRC bridge in a Docker container.
+Run the [camper_van](https://github.com/zerowidth/camper_van) Camfire <-> IRC
+bridge in a Docker container.
 
 # Building
 
