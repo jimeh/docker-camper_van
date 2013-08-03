@@ -12,6 +12,8 @@ run     apt-get install -y build-essential openssl libssl-dev
 run     apt-get install -y ruby1.9.3
 run     gem install --no-ri --no-rdoc camper_van
 
+# Clean up apt-get cache.
+run     apt-get clean
 
 entrypoint ["/usr/local/bin/camper_van"]
 cmd        ["--help"]
