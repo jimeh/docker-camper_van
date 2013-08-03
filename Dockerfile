@@ -6,7 +6,6 @@ maintainer  Jim Myhrberg "contact@jimeh.me"
 # Make sure the package repository is up to date.
 run     echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 run     apt-get update
-run     apt-get upgrade -y
 
 # Let's do this...
 run     apt-get install -y build-essential openssl libssl-dev
