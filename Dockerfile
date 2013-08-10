@@ -1,5 +1,5 @@
 # version 0.1.0
-# docker-version 0.5.0
+# docker-version 0.5.1
 from        ubuntu:12.04
 maintainer  Jim Myhrberg "contact@jimeh.me"
 
@@ -8,12 +8,12 @@ run     echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc
 run     apt-get update
 
 # Let's do this...
-run     apt-get install -y build-essential openssl libssl-dev
-run     apt-get install -y ruby1.9.3
-run     gem install --no-ri --no-rdoc camper_van
 
-# Clean up apt-get cache.
-run     apt-get clean
+# We use a bootstrap script to avoid having temporary cache files and build
+# dependencies being committed and included into the docker image. This saves
+# us about 150MB.
+add     bootstrap.sh /tmp/
+run     chmod +x /tmp/bootstrap.sh && /tmp/bootstrap.sh
 
 entrypoint ["/usr/local/bin/camper_van"]
 cmd        ["--help"]
