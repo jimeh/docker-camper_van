@@ -1,4 +1,4 @@
-# version 0.0.10.1
+# version 0.0.10.2
 # docker-version 0.5.1
 from        ubuntu:12.04
 maintainer  Jim Myhrberg "contact@jimeh.me"
@@ -14,5 +14,6 @@ run     apt-get update
 add     bootstrap.sh /tmp/
 run     chmod +x /tmp/bootstrap.sh && /tmp/bootstrap.sh
 
+expose     6667
 entrypoint ["/usr/local/bin/camper_van"]
 cmd        ["--help"]
