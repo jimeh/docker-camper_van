@@ -10,9 +10,9 @@ To pull and run the image from the Docker Index, simply run:
 
     docker run jimeh/camper_van
 
-This will download the image if needed, and print camper_van's `--help`
-message. To actually run camper van you at least have to tell it an IP address
-to bind to:
+This will download the image if needed, and print camper\_van's `--help`
+message. To actually run camper\_van you must at least have to tell it an IP
+address to bind to:
 
     docker run jimeh/camper_van 0.0.0.0
 
