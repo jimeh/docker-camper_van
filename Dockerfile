@@ -1,5 +1,5 @@
-# version 0.0.10.2
-# docker-version 0.5.1
+# version 0.0.14.0
+# docker-version 0.6.1
 from        ubuntu:12.04
 maintainer  Jim Myhrberg "contact@jimeh.me"
 

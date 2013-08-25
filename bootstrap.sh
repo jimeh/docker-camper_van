@@ -7,7 +7,7 @@ apt-get install -y openssl ruby1.9.1
 apt-get install -y build-essential libssl-dev ruby1.9.1-dev
 
 # Install camper_van.
-gem install --no-ri --no-rdoc -v 0.0.10 camper_van
+gem install --no-ri --no-rdoc -v 0.0.14 camper_van
 
 # Remove build dependencies.
 apt-get remove -y build-essential libssl-dev ruby1.9.1-dev
