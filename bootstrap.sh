@@ -14,5 +14,5 @@ apt-get remove -y build-essential libssl-dev ruby1.9.1-dev
 apt-get autoremove -y
 
 # Clean up caches.
-apt-get clean
+apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 gem source -c
